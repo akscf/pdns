@@ -1,0 +1,34 @@
+#!/bin/bash
+
+### BEGIN INIT INFO
+# Provides: pdns
+# Required-Start:
+# Required-Stop:
+# Default-Start: 2 3 4 5
+# Default-Stop:
+# Short-Description: pdns
+### END INIT INFO
+
+PATH=/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/bin:/sbin
+#LANG=ru_RU.UTF-8; export LANG
+#LANGUAGE=en_US; export LANGUAGE
+#LC_ALL=en_EN.UTF-8; export LC_ALL
+#LANG=en_US.UTF-8; export LANG
+#LC_MESSAGES=POSIX; export LC_MESSAGE
+
+HOME='/opt/pdns'
+WSP_BIN="${HOME}/bin/wstkd.sh"
+
+case $1 in
+    run)
+        ${WSP_BIN} start
+    ;;
+    start)
+        ${WSP_BIN} start &
+    ;;
+    stop)
+	${WSP_BIN} stop
+    ;;
+    *)
+    echo "$0 [ run | start | stop ]";
+esac
