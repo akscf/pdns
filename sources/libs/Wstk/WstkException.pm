@@ -1,8 +1,9 @@
 # *****************************************************************************************
 # Generic exception
 #
-# Copyright (C) AlexandrinKS
-# https://akscf.me/
+#
+# (C)2018 aks
+# https://github.com/akscf/
 # *****************************************************************************************
 package Wstk::WstkException;
 use Wstk::WstkDefs qw (RPC_ERR_CODE_INTERNAL_ERROR);
